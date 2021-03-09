@@ -3,6 +3,10 @@ import Router from 'vue-router'
 import home from './home.js'
 import login from './login.js'
 
+const originalPush = Router.prototype.push
+Router.prototype.push = function push (location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 Vue.use(Router)
 
