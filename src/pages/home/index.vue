@@ -19,7 +19,7 @@
           <el-row class="tac">
             <el-col :span="24">
               <el-menu
-                default-active="2"
+                default-active="1"
                 class="el-menu-vertical-demo"
                 background-color="#001529"
                 text-color="#fff"
@@ -85,6 +85,8 @@ export default {
   height: 100%;
   .el-container {
     height: 100%;
+    .el-main {
+    }
   }
   .el-header {
     background-color: #001529;

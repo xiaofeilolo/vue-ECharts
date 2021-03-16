@@ -7,7 +7,7 @@ export default [{
         // 实时数据
         path: '/realTimeData',
         name: 'RealTimeData',
-        component: () => import('../pages/realTimeData/index .vue')
+        component: () => import('../pages/realTimeData/index.vue')
     }, {
         // 数据分析
         path: '/analyseData',

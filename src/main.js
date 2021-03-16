@@ -13,7 +13,9 @@ import less from 'less'
 import './assets/style/index.less'
 
 Vue.prototype.$axios = axios;
-Vue.prototype.$echarts = echarts
+Object.defineProperties(Vue.prototype, {
+  echarts: { get: () => echarts }
+});
 
 
 

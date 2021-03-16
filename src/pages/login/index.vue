@@ -42,10 +42,10 @@ export default {
       })
         .then((res) => {
           if (!res.data) {
-            if (!this.userName) {
+            if (!data.userName) {
                 return this.$message.error("请输入用户名！");
             }
-            if (!this.passWord) {
+            if (!data.passWord) {
                 return this.$message.error("请输入密码！");
             }
             this.$message.error("账号或密码错误！");
