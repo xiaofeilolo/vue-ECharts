@@ -11,6 +11,7 @@ import axios from 'axios'
 import * as echarts from 'echarts';
 import less from 'less'
 import './assets/style/index.less'
+import './moment/moment'
 
 Vue.prototype.$axios = axios;
 Object.defineProperties(Vue.prototype, {

@@ -39,6 +39,7 @@ export default {
   margin: 0 33%;
   overflow: hidden;
   position: relative;
+  color: #f3f3f3;
   .text {
     display: inline-block;
     white-space: nowrap;

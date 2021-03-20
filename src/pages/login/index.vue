@@ -10,7 +10,7 @@
           ></el-input>
         </el-form-item>
         <el-form-item>
-          <el-input v-model="form.passWord" placeholder="请输入密码"></el-input>
+          <el-input v-model="form.passWord" placeholder="请输入密码" show-password></el-input>
         </el-form-item>
         <el-form-item style="text-align: center">
           <el-button size="medium" round @click="login" @keyup.enter="login">登录</el-button>
@@ -26,8 +26,8 @@ export default {
   data() {
     return {
       form: {
-        userName: "",
-        passWord: "",
+        userName: "17620384592",
+        passWord: "123456",
       },
     };
   },

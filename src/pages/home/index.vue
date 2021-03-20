@@ -56,19 +56,35 @@ export default {
   name: "Home",
   data() {
     return {
-      name:localStorage.getItem('name'),
       path:'RealTimeData'
     };
   },
   created() {
+    this.selectNav(1)
+  },
+  computed:{
+    name(){
+      return localStorage.getItem('name')
+    }
   },
   mounted() {},
   methods: {  
     // 退出登录
     logOut(){
-      localStorage.removeItem('token')
-      localStorage.removeItem('name')
-      this.$router.push('/login')
+      this.$confirm('请确认是否退出登录?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$message({
+            type: 'success',
+            message: '已退出登录'
+          });
+          localStorage.removeItem('token')
+          localStorage.removeItem('name')
+          this.$router.push('/login')
+        }).catch(() => {        
+        });
     },
     // 侧边导航栏选择
     selectNav(e){
@@ -86,6 +102,8 @@ export default {
   .el-container {
     height: 100%;
     .el-main {
+      background-color: #001529;
+      padding: 10px 20px;
     }
   }
   .el-header {
@@ -94,6 +112,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     color: hsla(0, 0%, 100%, 0.65);
+    border-bottom: 1px solid #ccc;
     .logo {
       display: flex;
       align-items: center;
@@ -123,6 +142,9 @@ export default {
     height: 100%;
     .el-col {
       height: 100%;
+      .el-menu {
+        border-right: 0.5px solid #ccc;
+      }
       .el-menu-vertical-demo {
         height: 100%;
       }

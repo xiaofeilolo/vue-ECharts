@@ -140,6 +140,9 @@ export default {
           colorLightness: [0.2, 100],
           color: ["#001529", "#409eff", "#5ab1ef"],
           dimension: 0,
+          textStyle:{
+            color:'#f3f3f3'
+          }
         },
         toolbox: {
           //右边工具栏
@@ -196,8 +199,8 @@ export default {
             name: "全部",
             type: "map",
             map: "china",
-            left: "180",
-            right: "70",
+            left: "220",
+            right: "0",
             top: 0,
             bottom: "0",
             width: "70%",
